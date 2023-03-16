@@ -12,9 +12,11 @@ After evverything is downloaded, clone this repository to your computer. Then, i
 
 ## Upload Instructions
 To upload the board, we used the STM32 Cube Programmer, which can be downloaded here <https://www.st.com/en/development-tools/stm32cubeprog.html>, and a [ST Link V2 from Adafruit](https://www.adafruit.com/product/2548). The procedure for uploading is as follows: 
-Open your STM32 programmer and set the following options:
+Open your STM32 programmer and set the following options shown in the image below
+
 ![bilde](https://user-images.githubusercontent.com/26024129/225601105-ae07751d-0471-4248-9f39-d06709f9ad06.png)
 
+If the image does not show, or you are using a text-to-speech program, the options we use are:
 Port: SWD 
 Frequency (kHz): 4000 
 Mode: Normal 
@@ -30,10 +32,10 @@ DIO to SWDIO
 CLK to SWCLK 
 RST to RST
 
-Then plug both into the computer. If the following steps don't work, try rebooting the computer with both the ST-LINK and Wio-E5 still connected to the PC. On the Wio-E5-Mini press and hold the RST button, then click Connect in the STM32CubeProgrammer before releasing the RST button. Now, go into the Option bytes tab and verify that Read Out Protection is set to AA. 
+Then plug both into the computer. If the following steps don't work, try rebooting the computer with both the ST-LINK and Wio-E5 still connected to the PC. On the Wio-E5-Mini press and hold the RST button, then click Connect in the STM32CubeProgrammer before releasing the RST button. Now, go into the Option bytes tab and verify that Read Out Protection is set to AA, as shown in the image below.  
 ![bilde](https://user-images.githubusercontent.com/26024129/225601551-cbef9a50-5d17-42a6-be6a-e81258ae6088.png)
 
-After the write protection is disabled, navigate to the Erasing and Programming tab. Here, check both the "Verify programming" and "Run after programming" buttons, then in File Path navigate to your compiled hex-file in the platformio-project. Select the .hex-file in the menu and verify that it shows up in the File Path-line afterwards. Then, click *Start programming* and if everything works as intended the built in LED should start flashing.
-
+After the write protection is disabled, navigate to the Erasing and Programming tab. Here, check both the "Verify programming" and "Run after programming" buttons, then in File Path navigate to your compiled hex-file in the platformio-project. Select the .hex-file in the menu and verify that it shows up in the File Path-line afterwards, as shown in the following image. 
 ![bilde](https://user-images.githubusercontent.com/26024129/225601899-6bd51291-44eb-4ea4-b44d-849f68cb8d72.png)
 
+ Then, click *Start programming* and if everything works as intended the built in LED should start flashing.
