@@ -4,7 +4,7 @@ Download Visual Studio Code <https://code.visualstudio.com>, then navigate to th
 
 ```bash
 cd platforms
-git clone https://github.com/nobodywasishere/platform-ststm32.git
+git clone https://github.com/platformio/platform-ststm32
 ```
 If you don't have git installed, you can find instructions on how to download it here: <https://github.com/git-guides/install-git>. Then, after installing git, try the above commands once more.
 
