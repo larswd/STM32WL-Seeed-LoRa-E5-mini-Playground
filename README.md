@@ -27,9 +27,13 @@ And whatever option of shared that makes your board show up in the Serial Number
 Debug in low power mode: Yes
 
 Now, connect the following four pins of the LoRa-E5-Mini to the ST-LINK V2: 
+
 GND to GND 
+
 DIO to SWDIO 
+
 CLK to SWCLK 
+
 RST to RST
 
 Then plug both into the computer. If the following steps don't work, try rebooting the computer with both the ST-LINK and Wio-E5 still connected to the PC. On the Wio-E5-Mini press and hold the RST button, then click Connect in the STM32CubeProgrammer before releasing the RST button. Now, go into the Option bytes tab and verify that Read Out Protection is set to AA, as shown in the image below.  
