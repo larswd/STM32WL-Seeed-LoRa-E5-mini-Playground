@@ -43,3 +43,18 @@ After the write protection is disabled, navigate to the Erasing and Programming 
 ![bilde](https://user-images.githubusercontent.com/26024129/225601899-6bd51291-44eb-4ea4-b44d-849f68cb8d72.png)
 
  Then, click *Start programming* and if everything works as intended the built in LED should start flashing.
+
+## Upload and code using integratd PlatformIO options
+To use the platformIO interface to code your Wio-E5 mini, first download [the Arduino Core ST STM32 from the platform manager](https://github.com/platformio/platform-ststm32?utm_source=platformio&utm_medium=piohome). Then, create a new project using the ```SeeedStudio LoRa-E5 mini``` option, or by setting the following options in an already existing ```platformio.ini``` file:
+```
+[env:lora_e5_mini]
+platform = ststm32
+board = lora_e5_mini
+```
+
+Then connect your board to your PC using both an USB-C cable and your ST-LINK ([We use this ST Link V2 from Adafruit](https://www.adafruit.com/product/2548)) to the GND, DIO, CLK and RST pins. Then add the following lines to your platformIO.ini file:
+```
+debug_tool = stlink
+upload_protocol = stlink
+```
+And tat is it. Further details on debugging with ST-Link can be found [here](https://dev.blues.io/blog/debugging-stm32-esp32-vscode-platformio/)
